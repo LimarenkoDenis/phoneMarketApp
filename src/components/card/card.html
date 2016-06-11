@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <a href="#!/phones/{{phone.id}}" class="thumb">
+            <img ng-src="{{$ctrl.item.imageUrl}}" alt="{{phone.name}}" />
+       </a>
+    <a href="#!/phones/{{phone.id}}">{{$ctrl.item.name}}</a>
+          
+  </div>
+  <div class="panel-body" >
+    <p>{{$ctrl.item.snippet}}</p>
+  </div>
+</div>
+<!-- <ul class="phones">
+        <li ng-repeat="phone in $ctrl.item | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+            class="thumbnail phone-list-item">
+          <a href="#!/phones/{{phone.id}}" class="thumb">
+            <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+          </a>
+          <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul> -->
