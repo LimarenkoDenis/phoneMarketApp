@@ -12,6 +12,6 @@ export default {
     item: '='
   },
   require: {
-    CardListController: '^^cardList'
+    PhoneListController: '^^phoneList'
   }
 };

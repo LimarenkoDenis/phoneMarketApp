@@ -1,19 +1,19 @@
-export default class CardListController {
-  constructor(CardService) {
+export default class PhoneListController {
+  constructor(PhoneService) {
     'ngInject';
-    this.CardService = CardService;
+    this.PhoneService = PhoneService;
     // this.items = [];
   }
 
   $onInit() {
-    this.CardService.list().then((resolve) => {
+    this.PhoneService.list().then((resolve) => {
       this.items = resolve;
         console.log(this.items);
     });
   }
 
   add(card) {
-    this.CardService.add(card)
+    this.PhoneService.add(card)
       .then( (resolve) => {
         this.items = resolve;
         this.$onInit();
@@ -23,7 +23,7 @@ export default class CardListController {
 
   remove(card) {
     console.log(card);
-    this.CardService.remove(card).then((resolve) => {
+    this.PhoneService.remove(card).then((resolve) => {
       this.items = resolve;
       this.$onInit();
     });

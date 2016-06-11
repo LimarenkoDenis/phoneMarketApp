@@ -1,4 +1,4 @@
-export default class CardService {
+export default class PhoneService {
     constructor($http) {
         'ngInject';
         this.$http = $http;
@@ -20,7 +20,7 @@ export default class CardService {
 
     remove(card) {
         var id = card.id;
-        return this.$http.delete('http://localhost:3000/cards/' + id)
+        return this.$http.delete('http://localhost:3000/phones/' + id)
             .then((response) => {
                 //   console.log(response.data);
                 return response.data;
@@ -34,7 +34,7 @@ export default class CardService {
     add(card) {
         card.id = this.items.length;
         card.date = new Date();
-        return this.$http.post('http://localhost:3000/cards/', card)
+        return this.$http.post('http://localhost:3000/phones/', card)
             .then((response) => response.data);
     }
 
