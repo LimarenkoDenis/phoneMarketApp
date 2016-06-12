@@ -1,19 +1,20 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-     <p>
-        Search:
-        <input ng-model="$ctrl.query" />
-      </p>
-      <p>
-        Sort by:
-        <select ng-model="$ctrl.orderProp">
-          <option value="name">Alphabetical</option>
-          <option value="age">Newest</option>
-        </select>
-      </p>
-      <div class="col-md-6" ng-repeat="card in $ctrl.items | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-        <phone item="card"></phone>
-      </div>
+        <div class="col-md-2">
+            <p>Search:
+                <input ng-model="$ctrl.query">
+            </p>
+            <p>Sort by:
+                <select ng-model="$ctrl.orderProp">
+                    <option value="name">Alphabetical</option>
+                    <option value="age">Newest</option>
+                </select>
+            </p>
+        </div>
+        <div class="col-md-10">
+            <div class="col-md-6" ng-repeat="card in $ctrl.items | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+                <phone item="card"></phone>
+            </div>
+        </div>
     </div>
 </div>
-

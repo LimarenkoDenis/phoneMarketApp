@@ -5,9 +5,6 @@ export default {
   template,
   controller,
   bindToController: true,
-  // scope: {
-  //   item: '='
-  // },
   bindings: {
     item: '='
   },

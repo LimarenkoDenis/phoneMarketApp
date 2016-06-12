@@ -12,20 +12,5 @@ export default class PhoneListController {
     });
   }
 
-  add(card) {
-    this.PhoneService.add(card)
-      .then( (resolve) => {
-        this.items = resolve;
-        this.$onInit();
-        // self.CardService.update()
-      });
-  }
-
-  remove(card) {
-    console.log(card);
-    this.PhoneService.remove(card).then((resolve) => {
-      this.items = resolve;
-      this.$onInit();
-    });
-  }
+ 
 }

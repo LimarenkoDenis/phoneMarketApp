@@ -3,7 +3,7 @@ export default class PhoneController {
     'ngInject';
   }
 
-  remove() {
-    this.PhoneListController.remove(this.item);
-  }
+  // remove() {
+  //   this.PhoneListController.remove(this.item);
+  // }
 }
