@@ -13,19 +13,25 @@ export default class PhoneListController {
   }
 
   likes(card) {
-    card.likes = ++card.likes;
+    ++card.likes;
     this.PhoneService.likes(card)
-      .then((resolve) => {
-        this.items = resolve;
-      });
+      .then(
+          this.PhoneService.list().then((resolve) => {
+            this.items = resolve;
+              console.log(this.items);
+          })
+      );
   }
 
   dislikes(card) {
     card.dislikes = ++card.dislikes;
     this.PhoneService.likes(card)
-      .then((resolve) => {
-        this.items = resolve;
-      });
+      .then(
+          this.PhoneService.list().then((resolve) => {
+            this.items = resolve;
+              console.log(this.items);
+          })
+      );
   }
 
 }

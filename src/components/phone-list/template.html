@@ -12,7 +12,8 @@
             </p>
         </div>
         <div class="col-md-10">
-            <div class="col-md-6" ng-repeat="card in $ctrl.items | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+            <div class="col-md-6"
+                 ng-repeat="card in $ctrl.items | filter:$ctrl.query | orderBy:$ctrl.orderProp track by $index">
                 <phone item="card"></phone>
             </div>
         </div>

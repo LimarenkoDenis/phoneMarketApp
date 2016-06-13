@@ -13,10 +13,8 @@ export default class PhoneService {
 
   likes(card) {
     return this.$http.post('http://localhost:3000/phones', card)
-    .then((response) => {
-      return response.data;
-    })
-    .catch(function(e) {
+    .then(response => response.data)
+    .catch((e) => {
       console.log(JSON.stringify(e));
     });
   }
