@@ -8,14 +8,14 @@
     <div class="panel-body">
         <p>{{$ctrl.item.snippet}}</p>
     </div>
+    <div class="panel-footer">
+      <span class="likes">
+         <button type="button" class="glyphicon glyphicon-thumbs-up" name="button" ng-click="$ctrl.likes()"></button>
+         <span ng-bind="$ctrl.item.likes"></span>
+      </span>
+      <span class="">
+         <button type="button" class="glyphicon glyphicon-thumbs-down" name="button" ng-click="$ctrl.dislike()"></button>
+         <span ng-bind="$ctrl.item.dislikes"></span>
+      </span>
+    </div>
 </div>
-<!-- <ul class="phones">
-        <li ng-repeat="phone in $ctrl.item | filter:$ctrl.query | orderBy:$ctrl.orderProp"
-            class="thumbnail phone-list-item">
-          <a href="#!/phones/{{phone.id}}" class="thumb">
-            <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
-          </a>
-          <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
-        </li>
-      </ul> -->
