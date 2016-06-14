@@ -13,4 +13,3 @@ export default ng.module('app')
         otherwise('/phones');
     }
   ]);
-  

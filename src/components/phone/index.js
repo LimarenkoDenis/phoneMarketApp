@@ -1,4 +1,4 @@
-import './phone.less'
+import './phone.less';
 import ng from 'angular';
 import PhoneComponent from './component';
 
