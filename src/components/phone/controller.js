@@ -1,14 +1,14 @@
 export default class PhoneController {
-  constructor() {
+  constructor(PhoneService) {
     'ngInject';
+    this.PhoneService = PhoneService;
   }
 
-  likes() {
-    // this.item.likes++;
-    this.PhoneListController.likes(this.item);
+  like() {
+    this.PhoneService.like(this.item);
   }
 
   dislike() {
-    this.PhoneListController.dislikes(this.item);
+    this.PhoneService.dislike(this.item);
   }
 }

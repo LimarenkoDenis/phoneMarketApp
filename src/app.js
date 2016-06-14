@@ -1,5 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import './style.less';
+import 'bootstrap/less/bootstrap.less';
 
 import ng from 'angular';
 import ngRoute from 'angular-route';

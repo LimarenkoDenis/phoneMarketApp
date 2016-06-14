@@ -27,10 +27,13 @@ module.exports = {
   plugins: [
     new CleanPlugin(['build']),
     new webpack.optimize.DedupePlugin(),
+    new ExtractTextPlugin('app-[hash].css'),
     new HtmlWebpackPlugin({
       template: './index.html',
       inject: 'body'
     }),
-    new ExtractTextPlugin('app-[hash].css')
+    new webpack.DefinePlugin({
+      API: JSON.stringify('http://localhost:3000')
+    })
   ]
 };

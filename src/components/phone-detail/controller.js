@@ -1,26 +1,18 @@
 export default class PhoneDetailController {
   constructor($routeParams, Phone) {
     'ngInject';
-    this.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
-          this.setImage(phone.images[0]);
-        });
-
-        this.setImage = function setImage(imageUrl) {
-          this.mainImageUrl = imageUrl;
-        };
-  }
-
-  $onInit() {
-    this.PhoneDetailService.list().then((resolve) => {
-      this.items = resolve;
-        console.log(this.items);
+    this.phone = Phone.detail($routeParams.phoneId, phone => {
+      this.setImage(phone.images[0]);
     });
   }
 
- 
-}
+  setImage(imageUrl) {
+    this.mainImageUrl = imageUrl;
+  }
 
-//     angular.module('phoneDetail', [
-//   'ngRoute',
-//   'core.phone'
-// ]);
+  $onInit() {
+    this.PhoneDetailService.list().then(resolve => {
+      this.items = resolve;
+    });
+  }
+}
